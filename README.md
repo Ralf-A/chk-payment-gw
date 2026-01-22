@@ -50,7 +50,7 @@ and retrieve their status, validates requests at the gateway level, calls an ext
 4. **Domain model and persistence**
 
    * `Payment` is persisted via `PaymentsRepository`. I did a little change to the provided double-repository in the sample code, to use H2 with JPA repository.
-  I thought that this small keeps the code simpler and more realistic.
+  I thought that this small keeps the code simpler and more realistic. Script `init.sql` can be used to initialize the database schema.
   * Only last 4 digits of the card are stored, derived in `PaymentGatewayServiceImpl` only if validation is passed.
   * The stored `PaymentStatus` is one of `AUTHORIZED`, `DECLINED`, `REJECTED`.
 
